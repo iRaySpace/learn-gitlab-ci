@@ -25,4 +25,4 @@ deploy-output:
     - ssh-keyscan $SSH_HOST >> ~/.ssh/known_hosts
   script:
     - ls
-    - scp -R .output $SSH_USER@$SSH_HOST:~/learn-github-ci/
+    - scp -r .output $SSH_USER@$SSH_HOST:~/learn-github-ci
