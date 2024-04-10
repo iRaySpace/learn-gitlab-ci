@@ -1,8 +1,12 @@
 stages:
   - build
 
-build-job:
+build-npm:
   stage: build
+  image: node:18.20.1
   script:
-    - echo "Compiling the code..."
-    - echo "Compile complete."
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - .output/
