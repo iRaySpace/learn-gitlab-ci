@@ -23,4 +23,4 @@ deploy-output:
     - ssh-keyscan $SSH_HOST >> ~/.ssh/known_hosts
   script:
     - ls
-    - ssh $SSH_USER@$SSH_HOST "echo 'Welcome!!!' > welcome.txt"
+    - scp .output $SSH_USER@$SSH_HOST:~/learn-github-ci/
