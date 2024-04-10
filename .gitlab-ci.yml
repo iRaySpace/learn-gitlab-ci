@@ -19,6 +19,7 @@ deploy-output:
     - 'which ssh-agent || ( apk add --update openssh )'
     - eval "$(ssh-agent -s)"
     - echo "$SSH_PRIVATE_KEY" | ssh-add - > /dev/null
+    - mkdir ~/.ssh
     - ssh-keyscan $SSH_HOST >> ~/.ssh/known_hosts
   script:
     - ls
